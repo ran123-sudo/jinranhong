@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>同花顺资讯首页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="icon" href="images/THS.ico" mce_href="/favicon.ico" type="image/x-icon" />
+<link media="all" href="css/jScrollPane.css" type="text/css" rel="stylesheet" />
+<link media="all" href="css/main.css" type="text/css" rel="stylesheet" />
+<!---[if IE]>
+<script type="text/javascript" src="http://172.20.0.153/demos/firebug-lite/content/firebug-lite-dev.js"></script>
+<![endif]--->
+</head>
+<body>
+<div class="top" id="topBar">
+<div class="top_left fl"></div>
+<div class="top_cont fl">
+  <div class="but_custom fr out cursor-p" id="settingsBtn">自定义首页</div>
+  <div class="fg fr" style="display:none;"></div>
+  <div class="but_custom fr yes cursor-p" id="exitBtn" style="display:none;">退&nbsp;出</div>
+  <div class="fg fr" style="display:none;"></div>
+  <div class="but_custom fr no cursor-p" id="saveBtn" style="display:none;">保&nbsp;存</div>
+  <div class="f5_out fr" id="refreshBtn"></div>
+  <strong class="title fl">资讯首页</strong></div>
+<a class="top_right fl" id="pageCloseBtn"  hidefocus="true" title="关闭"></a> </div>
+<div class="scroll-pane" id="pane">
+  <!--固定头条-->
+  <div class="ths_home">
+    <!--一级栏目设置-->
+    <div class="border_lr settings_dialog" id="settingsDialog">
+      <div class="settings_first">
+        <div class="settings_first_left fl">
+          <div class="title_box">选择您需要的自定义栏目</div>
+          <div class="cont_box">
+            <ul class="first_list" id="settingMainBlock">
+              <li class="no" data-id="cj">财经</li>
+              <li class="no" data-id="gp">股票</li>
+              <li class="no" data-id="jj">基金</li>
+              <li class="no" data-id="hy">行业</li>
+              <li class="no" data-id="sq">社区</li>
+            </ul>
+            <ul class="first_list hot" id="settingHotBlock">
+              <li class="no" data-id="thsjp">同花顺解盘</li>
+              <li class="no" data-id="gsgg">公司公告</li>
+              <li class="no" data-id="zxhyxw">最新行业新闻</li>
+              <li class="no" data-id="jjpl">基金评论</li>
+            </ul>
+            <ul class="first_list" id="settingOtherBlock">
+              <li class="no" data-id="sn">搜牛</li>
+              <li class="no" data-id="lmgn">热门概念</li>
+            </ul>
+          </div>
+        </div>
+        <div class="settings_first_mid fl"><span class="biao_img"></span></div>
+        <div class="settings_first_right fl">
+          <div class="title_box">修改自定义栏目的位置</div>
+          <div class="cont_box">
+            <div class="top_box_img"><span class="left_img"></span><span class="right_img"></span>同花顺资讯精选</div>
+            <div class="move_botton botton_yes" id="moveScrollUpBtn"><span class="left_img fl"></span><span class="right_img fr"></span>向上移动</div>
+            <div class="first_move" id="settingMoveContent">
+			<ul class="left_move fl" id="settingLeftMove">
+				<li></li>
+			</ul>
+			<ul class="right_move fr" id="settingRightMove">
+				<li></li>
+			</ul>
+            </div>
+            <div class="move_botton botton_no"  id="moveScrollDownBtn"><span class="left_img fl"></span><span class="right_img fr"></span>向下移动</div>
+          </div>
+        </div>
+        <div class="settings_first_bottom b"><span class="fr"><a href="#"  hidefocus="true" id="settingsDlgReset">恢复默认</a></span><a href="#"  hidefocus="true" id="newbieHelp">新手帮助？</a></div>
+      </div>
+    </div>
+    <!--显示头条-->
+    <div class="border_lr">
+      <div class="topnews_wrap">
+      	<div class="topnews_frame" id="topNews"></div>
+        <div class="loading_mask" id="loadingMask"></div>
+      </div>
+    </div>
+    <div class="bottom_img"> <span class="right_img fr"></span> <span class="left_img fl"></span> </div>
+  </div>
+  <!--固定头条-->
+<ul class="main" id="modelBox">
+ <li>
+  <div class="custom_box news_box">
+    <div class="top_box"><span class="right_img fr"></span><span class="more_button fr cursor-p"><a  hidefocus="true" href="#">更多...</a></span><span class="left_img fl"></span><span class="icon icon_user fl"></span><span class="text_title fl">财经</span></div>
+    <div class="cont_box">
+    	<div class="box_mask"></div>
+    </div>
+    <div class="bottom_box"><span class="right_img fr"></span><span class="left_img fl"></span></div>
+  </div>
+</li>
+ <li>
+  <div class="custom_box news_box">
+    <div class="top_box"><span class="right_img fr"></span><span class="more_button fr cursor-p"><a href="#"  hidefocus="true">更多...</a></span><span class="left_img fl"></span><span class="icon icon_user fl"></span><span class="text_title fl">股票</span></div>
+    <div class="cont_box">
+    	<div class="box_mask"></div>
+    </div>
+    <div class="bottom_box"><span class="right_img fr"></span><span class="left_img fl"></span></div>
+  </div>
+</li>
+ <li>
+  <div class="custom_box news_box">
+    <div class="top_box"><span class="right_img fr"></span><span class="more_button fr cursor-p"><a  hidefocus="true" href="#">更多...</a></span><span class="left_img fl"></span><span class="icon icon_user fl"></span><span class="text_title fl">行业</span></div>
+    <div class="cont_box">
+    	<div class="box_mask"></div>
+    </div>
+    <div class="bottom_box"><span class="right_img fr"></span><span class="left_img fl"></span></div>
+  </div>
+</li>
+ <li>
+  <div class="custom_box news_box">
+    <div class="top_box"><span class="right_img fr"></span><span class="more_button fr cursor-p"><a  hidefocus="true" href="#">更多...</a></span><span class="left_img fl"></span><span class="icon icon_user fl"></span><span class="text_title fl">基金</span></div>
+    <div class="cont_box">
+    	<div class="box_mask"></div>
+    </div>
+    <div class="bottom_box"><span class="right_img fr"></span><span class="left_img fl"></span></div>
+  </div>
+</li>
+</ul>
+</div>
+</div>
+</body>
+</html>
+<script data-main="scripts/main" src="scripts/libs/require-jquery.js" charset="utf-8"></script>
+<script language="javascript">
+var id=17543519;
+var ld="client";
+</script>
+<script src="http://www.10jqka.com.cn/stat.js"></script>
